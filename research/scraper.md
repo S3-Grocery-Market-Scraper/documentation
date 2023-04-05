@@ -23,31 +23,18 @@ Below I will write out the possible methods to solve this problem.
 
 ## Possible sources
 
-There are several sources you can use to collect product data from Dutch supermarkets.
-One option is to use the supermarket's own website,where they often have a list of products and their prices.
+To collect product data from Dutch supermarkets, there are several sources you can use.
+The supermarket's own website is a good starting point, as they often provide a list of products and prices.
 Another option is to use price comparison websites, such as Vergelijk.nl or Kieskeurig.nl, which collect and compare prices from multiple supermarkets.
+Web scraping tools like BeautifulSoup or Scrapy can also be used to extract data directly from the supermarket's website. Additionally,
+web scraping services or data providers like PromptCloud or Import.io specialize in collecting and providing product data from multiple sources
 
-## Available methods
-### Public API
+For this project I want to focus on, Albert Hein, Jumbo & Lidl. These supermarkets don't have a public API available for this data,
+or if they have it's behind a pay wall. What is outside the budget for this project.
+That also means that websites like ShoppingScraper are off limits, because of the high prices for access to their API's.
 
-Public APIs are tools that allow developers to use data or services from other applications or platforms.
-For example, you can use an API to show Instagram posts on your website or get weather information from a weather service.
-To use a public API, you typically need to sign up and get a special key or token that confirms you're authorized to use it.
-Once you're authorized, you can start making requests and getting data from the API. Public APIs usually come with instructions on how to use them,
-including what kind of data you can get and how to format your requests.
 
-Pros:
-
-- APIs are often faster and more efficient at retrieving data than web scraping.
-- APIs are generally more reliable than web scraping, as the data is provided by the source in a consistent format and can be updated in real-time.
-- Using an API is often more secure than web scraping, as scraping may violate a website's terms of service or even be considered illegal.
-
-Cons:
-
-- Some APIs may have restrictions on usage or require payment, whereas web scraping is generally free.
-- Using an API may limit the amount or type of data that can be accessed, whereas web scraping allows for more flexibility and customization.
-
-### Web scraping
+## Web scraping
 
 Web scraping is a way to automatically extract data from websites.
 You use special software to download the code that makes up a website and then pick out the information you want.
@@ -58,17 +45,22 @@ But sometimes web scraping is against the rules or even against the law, so you 
 
 Pros:
 
-- Web scraping allows for more flexibility and customization than using an API, as you can extract any data that's visible on a website, not just the data that's provided by the API.
-- Web scraping is often free, whereas some APIs may have restrictions on usage or require payment.
-- Web scraping can be used on websites that don't offer an API, giving you access to data that may not be available through any other means.
+Access to vast amounts of data: With web scraping, you can collect a large amount of data in a short period of time from various sources.
+
+Customizable data: Web scraping allows you to collect data specific to your needs, rather than relying on the pre-packaged data that some APIs provide.
+
+Cost-effective: Web scraping is a more cost-effective solution than purchasing data from third-party providers or using APIs that charge for access.
 
 Cons:
 
-- Web scraping is generally less reliable than using an API, as the data may be inconsistent or change frequently.
-- Web scraping may violate a website's terms of service or even be considered illegal, depending on the circumstances.
-- Web scraping can be slower and less efficient than using an API, especially if the website you're scraping has a lot of data or is slow to load.
+Legal and ethical concerns: Web scraping can be illegal if it violates the website's terms of service or if it is used for malicious purposes, such as stealing data or infringing on copyright.
 
-#### How to avoid bot detection
+Technical challenges: Web scraping requires technical knowledge and skills, including programming, data manipulation, and understanding of HTML/CSS and other web technologies.
+
+Risk of detection: Websites can detect web scraping activity and block access, which can result in wasted time and resources. Additionally, websites can take legal action against web scrapers for violating their terms of service or infringing on their intellectual property rights.
+
+
+### How to avoid bot detection
 
 If you're using web scraping to get data from a website, it's important not to look like a bot. If the website thinks you're a bot,
 it might block you from accessing the data you need. To avoid getting detected, you should wait a different amount of time between each request you make.
